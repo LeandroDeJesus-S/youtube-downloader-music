@@ -44,7 +44,7 @@ class Download:
                 audio = stream.get_audio_only() if mp3 else stream.get_by_itag(22)
                 audio.download(self.save_path, filename)
             
-                print(f'\033[32m{filename}\033[m finalizado!')
+                print(f' \033[35m{filename} \033[32mfinalizado!\033[m')
             except Exception as Error:
                 print(f'Erro no download: {Error}')
         

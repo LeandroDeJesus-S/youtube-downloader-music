@@ -4,6 +4,7 @@ from pathlib import Path
 from utils import messages, tryerrors
 from down.mod import Download
 from utils import functions
+from time import sleep
 from colorama import init
 
 init()
@@ -16,7 +17,7 @@ args = argparse.ArgumentParser()
 args.add_argument('link', type=str, nargs='+')
 args.add_argument('-p', action='store_true', help=messages.P_MESSAGE)
 args.add_argument('-v', action='store_true', help=messages.V_MESSAGE)
-args.add_argument('-t', nargs=1, default='mp3', help=messages.V_MESSAGE)
+args.add_argument('-t', nargs=1, default='mp3', help=messages.T_MESSAGE)
 args.add_argument('-o', default=default_music_path, nargs=1, 
                   type=str, help=messages.O_MESSAGE, metavar='[output]')
 

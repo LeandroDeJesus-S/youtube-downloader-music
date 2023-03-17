@@ -1,5 +1,6 @@
 from pytube import exceptions
 
+
 def make_download_treatments(func, *args):
     try:
         func(*args)
